@@ -1,0 +1,125 @@
+.my-head {
+  min-height: 10vh;
+  width: 98%;
+  margin: auto;
+  margin-top: 0.3rem;
+  // padding
+  /* background: black; */
+  display: flex;
+  align-items: center;
+  // justify-content: space-between;
+  /* gap: 13rem; */
+  .home-input-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  .prm-inst-wrapper {
+    display: flex;
+    align-items: center;
+  }
+}
+.logo {
+  flex: 1 1 calc(35rem + 1vw);
+  margin: 0 1.3rem;
+  // width: 5rem;
+}
+
+.right-wrapper {
+  flex: 2 1 93rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* gap: 0.1rem; */
+  .home-input-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  .prm-inst-wrapper {
+    display: flex;
+    align-items: center;
+  }
+}
+.home-button {
+  background: rgba(0, 0, 0, 0.082);
+  margin-right: 0.8rem;
+  padding: 1rem;
+  border-radius: 50%;
+}
+.home-icon {
+  width: 2.6rem;
+}
+.my-form {
+  display: flex;
+  align-items: center;
+  margin: 0rem 0.2rem;
+  width: 48rem;
+  position: relative;
+}
+.my-form input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 1.5rem;
+  padding: 1rem 4.5rem;
+  /* text-align: center; */
+  border-radius: 2rem;
+}
+.search-icon {
+  width: 2.5rem;
+  position: absolute;
+  left: 3%;
+}
+.other-icon {
+  width: 2.5rem;
+  position: absolute;
+  right: 3%;
+}
+.my-form p {
+  position: absolute;
+  right: 10%;
+  top: 4%;
+  font-size: 2.2rem;
+}
+.home {
+  display: flex;
+}
+.premium-btn {
+  padding: 0.8rem 2rem;
+  margin-left: 1.6rem;
+  border: none;
+}
+.install-app {
+  width: 8.7rem;
+  margin: 0 1.6rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  border: none;
+}
+.install-app img {
+  width: 1.8rem;
+}
+.ntf-icon {
+  width: 1.7rem;
+  margin: 0rem 3rem 0rem 0rem;
+}
+.profile {
+  width: 3.6rem;
+  height: 3.6rem;
+  margin: 0;
+
+  padding: 0.4rem;
+  border-radius: 50%;
+  background: #00000015;
+  overflow: hidden;
+}
+.profile-pic {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  /* border-radius: 50%; */
+}

@@ -1,0 +1,118 @@
+.left-side-library {
+  flex: 1 1 40rem;
+  background: #b1b0b0;
+  border-radius: 1rem;
+  padding: 0.6rem 1.5rem;
+  // width: 40rem;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  .your-library {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 6rem;
+    .your-library-contents {
+      display: flex;
+      align-items: center;
+      margin-left: 0.5rem;
+      img {
+        width: 2.8rem;
+      }
+      h4 {
+        font-size: 1.5rem;
+        margin: 1rem;
+      }
+    }
+    .your-library-icons {
+      display: flex;
+      align-items: center;
+      .plus-button {
+        background: rgba(0, 0, 0, 0.082);
+        padding: 0.6rem;
+        border-radius: 50%;
+        margin: 1rem;
+      }
+      .right-arrow-icon {
+        margin: 1rem;
+      }
+      img {
+        width: 2rem;
+      }
+    }
+  }
+}
+.selection-btns {
+  margin-bottom: 0.7rem;
+  button {
+    margin-right: 0.4rem;
+    padding: 0.5rem 1.2rem;
+    background: rgba(230, 229, 229, 0.952);
+  }
+}
+.lower-library {
+  overflow: scroll;
+  .search-recent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.5rem;
+    margin-right: 0.5rem;
+    .recents {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1.8rem;
+    }
+    h4 {
+      font-size: 1.4rem;
+      margin: 0 1rem;
+    }
+    img {
+      width: 1.8rem;
+    }
+  }
+
+  .library-lists {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.6rem;
+    .mylist {
+      display: flex;
+      align-items: center;
+      height: 5rem;
+      margin: 0.8rem 0;
+      .album-name {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 1rem;
+        // gap: 0.2rem;
+        .album-name-pgh {
+          display: flex;
+          .dot {
+            align-self: center;
+            width: 0.34rem;
+            height: 0.34rem;
+            border-radius: 50%;
+            background: black;
+            margin: 0 0.5rem;
+          }
+        }
+        h4 {
+          font-size: 1.5rem;
+        }
+        p {
+          font-size: 1.32rem;
+        }
+      }
+    }
+  }
+}
+.library-lists img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 1rem;
+  object-fit: cover;
+  object-position: center;
+}
