@@ -1,6 +1,124 @@
 .right-side-library {
-  flex: 4 1 50rem;
-  min-height: 75vh;
-  // width: 10rem;
-  background: lightblue;
+  flex: 4 1 100rem;
+  overflow: scroll;
+  max-height: 75vh;
+  background: rgba(37, 37, 37, 0.692);
+  border-radius: 1rem;
+  padding: 1.5rem 4rem;
+
+  .all-music-btns button {
+    padding: 0.7rem 1.4rem;
+    margin-right: 1rem;
+    background: rgba(116, 114, 114, 0.212);
+    color: white;
+    font-size: 1.4rem;
+  }
+  .all-music-btns button:nth-child(1) {
+    background: white;
+    color: black;
+  }
+
+  .recently-played-container {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1rem;
+  }
+  .recent-album {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    height: 4.5rem;
+    border-radius: 1rem;
+    background: rgba(116, 114, 114, 0.212);
+    cursor: pointer;
+    img {
+      width: 4.5rem;
+      height: 4.5rem;
+      border-radius: 1rem;
+      object-fit: cover;
+      object-position: center;
+    }
+    h4 {
+      font-size: 1.2rem;
+    }
+  }
+  .suggested-musics-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 5rem;
+
+    .title1 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .suggested-musics-album-container {
+      display: flex;
+      gap: 1rem;
+      overflow-x: scroll;
+      scrollbar-width: thin;
+
+      .Sugg-alb img {
+        border-radius: 1rem;
+        width: 17rem;
+        height: 17rem;
+      }
+    }
+  }
+
+  .footer {
+    margin: 7rem 0;
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+      padding: 6rem 0;
+      border-top: 1px solid rgba(97, 94, 94, 0.315);
+      border-bottom: 1px solid rgba(97, 94, 94, 0.315);
+
+      h2 {
+        font-size: 1.55rem;
+        margin-bottom: 1.2rem;
+      }
+      h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+      .social-links {
+        display: flex;
+        align-items: flex-start;
+        gap: 2rem;
+        div {
+          background: rgba(116, 114, 114, 0.212);
+          border-radius: 50%;
+          width: 4.2rem;
+          height: 4.2rem;
+          padding: 1rem;
+        }
+        img {
+          width: 2.2rem;
+        }
+      }
+    }
+
+    .legal-terms {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+
+      .privacy-policy {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+      }
+      h3 {
+        font-size: 1.4rem;
+      }
+    }
+  }
 }

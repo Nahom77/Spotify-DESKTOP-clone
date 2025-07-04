@@ -1,12 +1,13 @@
 .left-side-library {
-  flex: 1 1 40rem;
-  background: #b1b0b0;
+  flex: 0 0 34rem;
+  background: rgba(37, 37, 37, 0.692);
   border-radius: 1rem;
   padding: 0.6rem 1.5rem;
   // width: 40rem;
   height: 75vh;
   display: flex;
   flex-direction: column;
+  transition: all 0.2s;
   .your-library {
     display: flex;
     align-items: center;
@@ -28,12 +29,12 @@
       display: flex;
       align-items: center;
       .plus-button {
-        background: rgba(0, 0, 0, 0.082);
+        background-color: rgba(58, 57, 57, 0.788);
         padding: 0.6rem;
         border-radius: 50%;
         margin: 1rem;
       }
-      .right-arrow-icon {
+      .expand-icon {
         margin: 1rem;
       }
       img {
@@ -45,24 +46,26 @@
 .selection-btns {
   margin-bottom: 0.7rem;
   button {
+    color: white;
     margin-right: 0.4rem;
     padding: 0.5rem 1.2rem;
-    background: rgba(230, 229, 229, 0.952);
+    background: rgba(116, 114, 114, 0.212);
   }
 }
 .lower-library {
-  overflow: scroll;
+  // position: relative;
+  // overflow: scroll;
   .search-recent {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 0.5rem;
     margin-right: 0.5rem;
+    margin-top: 1.8rem;
     .recents {
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: 1.8rem;
     }
     h4 {
       font-size: 1.4rem;
@@ -74,14 +77,18 @@
   }
 
   .library-lists {
+    height: 50vh;
+    overflow: scroll;
     display: flex;
     flex-direction: column;
     margin-top: 0.6rem;
     .mylist {
       display: flex;
       align-items: center;
-      height: 5rem;
-      margin: 0.8rem 0;
+      height: 6.5rem;
+      // margin: 0.8rem 0;
+      padding: 1rem;
+      border-radius: 1rem;
       .album-name {
         display: flex;
         flex-direction: column;
@@ -95,7 +102,7 @@
             width: 0.34rem;
             height: 0.34rem;
             border-radius: 50%;
-            background: black;
+            background: white;
             margin: 0 0.5rem;
           }
         }
@@ -109,10 +116,79 @@
     }
   }
 }
+
+.mylist:hover {
+  background: rgba(100, 99, 99, 0.233);
+}
 .library-lists img {
   width: 5rem;
   height: 5rem;
   border-radius: 1rem;
   object-fit: cover;
   object-position: center;
+}
+
+// //////////////////////////////////////////////////////////  //
+
+.collapse {
+  flex: 0 0 7rem;
+  // width: 10rem;
+  align-items: center;
+  padding: 2rem 0 0 0;
+
+  .upper-library h4,
+  .expand-icon,
+  .selection-btns {
+    display: none;
+  }
+
+  .your-library {
+    flex-direction: column;
+  }
+  .lower-library {
+    scrollbar-width: thin;
+
+    .search-recent {
+      display: none;
+    }
+    .mylist {
+      .album-name {
+        display: none;
+      }
+    }
+  }
+}
+
+// //////////////////////////////////////////////////////////  //
+
+.expanded {
+  flex: 1 1 100rem;
+  width: 100%;
+
+  .library-controllers {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .search-recent {
+    }
+  }
+  .selection-btns {
+    button {
+      padding: 0.9rem 1.7rem;
+    }
+  }
+
+  .library-lists {
+    flex-direction: row;
+    flex-wrap: wrap;
+    .mylist {
+      flex-direction: column;
+      align-items: flex-start;
+      height: 24.5rem;
+    }
+  }
+  .library-lists img {
+    width: 17rem;
+    height: 17rem;
+  }
 }

@@ -11,94 +11,154 @@
       href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" href="fav-icon.png" />
     <link rel="stylesheet" href="styles/style.css" />
     <title>Spotify - Web player: Music for everyone</title>
   </head>
   <body>
+    <!-- ########## Header ########## -->
+    <header class="my-head">
+      <!-- Spotify logo -->
+      <div class="logo">
+        <img
+          src="Icon/spotify-logo-white.svg"
+          class="icon"
+          title="Spotify"
+          alt=""
+        />
+      </div>
+      <div class="right-wrapper">
+        <!-- Text input field for searching songs -->
+        <div class="home-input-wrapper">
+          <div class="home-button">
+            <img
+              src="Icon/home-icon.svg"
+              title="Home"
+              class="home-icon icon"
+              alt=""
+            />
+          </div>
+          <form class="my-form">
+            <!-- Search icon -->
+            <img
+              src="Icon/search-icon-white.svg"
+              class="search-icon icon"
+              title="Search"
+              alt=""
+            />
+            <!-- Input field -->
+            <input
+              type="text"
+              name="search"
+              class="poppins-regular"
+              placeholder="What do you want to play?"
+            />
+            <p>|</p>
+            <!-- Browse icon -->
+            <img
+              src="Icon/library.svg"
+              class="other-icon icon"
+              title="Browse"
+              alt=""
+            />
+          </form>
+        </div>
+
+        <!-- ------ Premium btn, notification and profile picture -------- -->
+        <div class="prm-inst-wrapper">
+          <button class="premium-btn poppins-semibold">Explore Premium</button>
+          <!-- Btn for installing the app -->
+          <button class="install-app">
+            <img src="Icon/download-icon-white.svg" class="icon" alt="" />
+            <p>Install App</p>
+          </button>
+          <!-- Notification icon -->
+          <img
+            src="Icon/bell-notification-icon.svg"
+            class="ntf-icon icon"
+            title="What's New"
+            alt=""
+          />
+          <!-- Profile picture -->
+          <div class="profile">
+            <img src="img/Img40.jpeg" class="profile-pic" alt="" />
+          </div>
+        </div>
+      </div>
+    </header>
+
     <main>
-      <header class="my-head">
-        <div class="logo">
-          <img src="icons/svg-0.svg" class="icon" alt="" />
-        </div>
-        <div class="right-wrapper">
-          <div class="home-input-wrapper">
-            <div class="home-button">
-              <img src="icons/svg-1.svg" class="home-icon icon" alt="" />
-            </div>
-            <form class="my-form">
-              <!-- <label for="search"> -->
-              <img src="icons/svg-2.svg" class="search-icon icon" alt="" />
-              <!-- </label> -->
-              <input
-                type="text"
-                name="search"
-                class="poppins-regular"
-                placeholder="What do you want to play?"
-              />
-              <p>|</p>
-              <img src="icons/svg-5.svg" class="other-icon icon" alt="" />
-            </form>
-          </div>
-          <div class="prm-inst-wrapper">
-            <button class="premium-btn poppins-semibold">
-              Explore Premium
-            </button>
-            <button class="install-app">
-              <img src="icons/svg-6.svg" class="icon" alt="" />
-              Install App
-            </button>
-            <img src="icons/svg-7.svg" class="ntf-icon icon" alt="" />
-            <div class="profile">
-              <img
-                src="Img/pexels-pixabay-459799.jpg"
-                class="profile-pic"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-      </header>
+      <!-- ########## Main Content ########## -->
       <section class="main-content">
+        <!-- ******** List of my library ******** -->
         <section class="left-side-library">
           <div class="upper-library">
+            <!-- Your library title -->
             <div class="your-library">
               <div class="your-library-contents">
-                <img src="icons/svg-8.svg" alt="" class="library-icon icon" />
+                <!-- Collapse icon -->
+                <img
+                  hidden
+                  src="Icon/collapse-icon.svg"
+                  alt=""
+                  class="library-icon icon"
+                />
                 <h4 class="poppins-semibold">Your Library</h4>
               </div>
               <div class="your-library-icons">
+                <!-- Create new playlist icon -->
                 <div class="plus-button">
-                  <img src="icons/svg-9.svg" alt="" class="plus-icon icon" />
+                  <img
+                    src="Icon/plus-icon.svg"
+                    alt=""
+                    class="plus-icon icon"
+                    title="Create a Playlist, folder or Jam"
+                  />
                 </div>
+                <!-- Expand icon -->
                 <img
-                  src="icons/svg-10.svg"
+                  src="Icon/expand-icon.svg"
                   alt=""
-                  class="right-arrow-icon icon"
+                  class="expand-icon icon"
                 />
               </div>
             </div>
-            <div class="selection-btns">
-              <button class="playlist-btn">Playlists</button>
-              <button class="artists-btn">Artists</button>
-              <button class="albums-btn">Albums</button>
-            </div>
           </div>
+
+          <!-- Selection btns, search icon and filter icon -->
           <div class="lower-library">
-            <div class="search-recent">
-              <img
-                src="icons/svg-13.svg"
-                class="search-inside-library icon"
-                alt=""
-              />
-              <div class="recents">
-                <h4 class="poppins-regular">Recents</h4>
-                <img src="icons/svg-14.svg" alt="" class="sort-icon icon" />
+            <div class="library-controllers">
+              <div class="selection-btns">
+                <button class="playlist-btn">Playlists</button>
+                <button class="artists-btn">Artists</button>
+                <button class="albums-btn">Albums</button>
+              </div>
+              <div class="search-recent">
+                <!-- Search icon -->
+                <img
+                  src="Icon/search-icon-white.svg"
+                  class="search-inside-library icon"
+                  title="Search in your library"
+                  alt=""
+                />
+                <!-- Recent title and filter icon -->
+                <div class="recents">
+                  <h4 class="poppins-regular">Recents</h4>
+                  <img
+                    src="Icon/filter-icon-white.svg"
+                    alt=""
+                    class="sort-icon icon"
+                  />
+                </div>
               </div>
             </div>
+
+            <!-- List of playlists, saved albums and others -->
             <div class="library-lists">
+              <!-- Playlist 1 -->
               <div class="mylist list1">
                 <div class="album-cover1 cover">
-                  <img src="Img/apple_drops_4k-3840x2160.jpg" alt="" />
+                  <img src="img/liked-songs-64.png" alt="" />
                 </div>
                 <div class="album-name name1">
                   <h4 class="poppins-semibold">Liked Songs</h4>
@@ -109,12 +169,11 @@
                   </div>
                 </div>
               </div>
+
+              <!-- Playlist 2 -->
               <div class="mylist list2">
                 <div class="album-cover2 cover">
-                  <img
-                    src="Img/battlefield_4_zavod_graveyard_shift_4k-5120x2880.jpg"
-                    alt=""
-                  />
+                  <img src="img/Img17.jpeg" alt="" />
                 </div>
                 <div class="album-name name2">
                   <h4 class="poppins-semibold">Worship - 2</h4>
@@ -125,12 +184,11 @@
                   </div>
                 </div>
               </div>
+
+              <!-- Playlist 3 -->
               <div class="mylist list3">
                 <div class="album-cover3 cover">
-                  <img
-                    src="Img/deep_valley_switzerland_4k-3840x2160.jpg"
-                    alt=""
-                  />
+                  <img src="img/Img03.jpeg" alt="" />
                 </div>
                 <div class="album-name name3">
                   <h4 class="poppins-semibold">Hyaw Minch</h4>
@@ -141,9 +199,11 @@
                   </div>
                 </div>
               </div>
+
+              <!-- Playlist 4 -->
               <div class="mylist list4">
                 <div class="album-cover4 cover">
-                  <img src="Img/firewatch_2016_game-2560x1440.jpg" alt="" />
+                  <img src="img/Img21.jpeg" alt="" />
                 </div>
                 <div class="album-name name4">
                   <h4 class="poppins-semibold">Worship - 1</h4>
@@ -154,30 +214,33 @@
                   </div>
                 </div>
               </div>
+
+              <!-- Playlist 5 -->
               <div class="mylist list5">
                 <div class="album-cover5 cover">
-                  <img src="Img/firewatch_5k-5120x2880.jpg" alt="" />
+                  <img src="img/Img23.webp" alt="" />
                 </div>
                 <div class="album-name name5">
                   <h4 class="poppins-semibold">Befikadu Bekele</h4>
                   <p class="poppins-regular">Artist</p>
                 </div>
               </div>
+
+              <!-- Playlist 6 -->
               <div class="mylist list6">
                 <div class="album-cover6 cover">
-                  <img src="Img/rolling_waves_5k-5120x2880.jpg" alt="" />
+                  <img src="img/Img07.jpeg" alt="" />
                 </div>
                 <div class="album-name name6">
                   <h4 class="poppins-semibold">Agegnehu Yideg</h4>
                   <p class="poppins-regular">Artist</p>
                 </div>
               </div>
+
+              <!-- Playlist 7 -->
               <div class="mylist list7">
                 <div class="album-cover7 cover">
-                  <img
-                    src="Img/the_legend_of_zelda_breath_of_the_wild_4k_2017-3840x2160.jpg"
-                    alt=""
-                  />
+                  <img src="img/Img20.jpeg" alt="" />
                 </div>
                 <div class="album-name name7">
                   <h4 class="poppins-semibold">Rahel Tefera</h4>
@@ -187,10 +250,356 @@
             </div>
           </div>
         </section>
+
+        <!-- ******** Right side library ********* -->
         <section class="right-side-library">
-          <div><h1>Hello there again.</h1></div>
+          <div class="all-music-btns">
+            <button class="btn">All</button>
+            <button class="btn">Music</button>
+          </div>
+          <!-- Recent album lists -->
+          <div class="recently-played-container">
+            <!-- Album 1 -->
+            <div class="recent-album recent">
+              <div class="recent-album-cover cover1">
+                <img src="img/Img01.jpeg" alt="" />
+              </div>
+              <div class="recent-album-name">
+                <h4 class="poppins-semibold">Bizu Yehonkilign</h4>
+              </div>
+            </div>
+
+            <!-- Album 2 -->
+            <div class="recent-album recent">
+              <div class="recent-album-cover cover1">
+                <img src="img/en (2).JPEG" alt="" />
+              </div>
+              <div class="recent-album-name">
+                <h4 class="poppins-semibold">Endale Woldegiorgis Radio</h4>
+              </div>
+            </div>
+
+            <!-- Album 3 -->
+            <div class="recent-album recent">
+              <div class="recent-album-cover cover1">
+                <img src="img/Img03.jpeg" alt="" />
+              </div>
+              <div class="recent-album-name">
+                <h4 class="poppins-semibold">Hyaw Minch</h4>
+              </div>
+            </div>
+
+            <!-- Album 4 -->
+            <div class="recent-album recent">
+              <div class="recent-album-cover cover1">
+                <img src="img/Img04.jpeg" alt="" />
+              </div>
+              <div class="recent-album-name">
+                <h4 class="poppins-semibold">Agizegn, vol.1</h4>
+              </div>
+            </div>
+
+            <!-- Album 5 -->
+            <div class="recent-album recent">
+              <div class="recent-album-cover cover1">
+                <img src="img/Img05.jpeg" alt="" />
+              </div>
+              <div class="recent-album-name">
+                <h4 class="poppins-semibold">Mesfin Gutu</h4>
+              </div>
+            </div>
+
+            <!-- Album 6 -->
+            <div class="recent-album recent">
+              <div class="recent-album-cover cover1">
+                <img src="img/Img06.jpeg" alt="" />
+              </div>
+              <div class="recent-album-name">
+                <h4 class="poppins-semibold">Afan Oromo gospel song</h4>
+              </div>
+            </div>
+          </div>
+
+          <!-- -------Suggested musics --------- -->
+          <div class="suggested-musics-container">
+            <!-- Suggested musics title -->
+            <div class="title1">
+              <h1 class="poppins-bold">Its New Music Friday!</h1>
+              <p class="poppins-regular">Show all</p>
+            </div>
+
+            <!-- Suggested albums -->
+            <div class="suggested-musics-album-container">
+              <!-- Suggested album 1 -->
+              <div class="Sugg-alb">
+                <div class="alb-cover cover">
+                  <img src="img/en.JPEG" alt="" />
+                </div>
+                <div class="album-name name7">
+                  <p class="poppins-regular">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. !
+                  </p>
+                </div>
+              </div>
+
+              <!-- Suggested album 2 -->
+              <div class="Sugg-alb">
+                <div class="alb-cover cover">
+                  <img src="img/en (3).JPEG" alt="" />
+                </div>
+                <div class="album-name name7">
+                  <p class="poppins-regular">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. !
+                  </p>
+                </div>
+              </div>
+
+              <!-- Suggested album 3 -->
+              <div class="Sugg-alb">
+                <div class="alb-cover cover">
+                  <img src="img/en.jpeg" alt="" />
+                </div>
+                <div class="album-name name7">
+                  <p class="poppins-regular">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. !
+                  </p>
+                </div>
+              </div>
+
+              <!-- Suggested album 4 -->
+              <div class="Sugg-alb">
+                <div class="alb-cover cover">
+                  <img src="img/en (4).JPEG" alt="" />
+                </div>
+                <div class="album-name name7">
+                  <p class="poppins-regular">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. !
+                  </p>
+                </div>
+              </div>
+
+              <!-- Suggested album 5 -->
+              <div class="Sugg-alb">
+                <div class="alb-cover cover">
+                  <img src="img/en (5).JPEG" alt="" />
+                </div>
+                <div class="album-name name7">
+                  <p class="poppins-regular">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. !
+                  </p>
+                </div>
+              </div>
+
+              <!-- Suggested album 6 -->
+              <div class="Sugg-alb">
+                <div class="alb-cover cover">
+                  <img src="img/en (2).JPEG" alt="" />
+                </div>
+                <div class="album-name name7">
+                  <p class="poppins-regular">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. !
+                  </p>
+                </div>
+              </div>
+
+              <!-- Suggested album 7 -->
+              <div class="Sugg-alb">
+                <div class="alb-cover cover">
+                  <img src="img/Img27.jpeg" alt="" />
+                </div>
+                <div class="album-name name7">
+                  <p class="poppins-regular">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. !
+                  </p>
+                </div>
+              </div>
+
+              <!-- Suggested album 8 -->
+              <div class="Sugg-alb">
+                <div class="alb-cover cover">
+                  <img src="img/Img31.jpeg" alt="" />
+                </div>
+                <div class="album-name name7">
+                  <p class="poppins-regular">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. !
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Made for a user -->
+          <div class="suggested-musics-container">
+            <!-- Suggested musics title -->
+            <div class="title1">
+              <h1 class="poppins-bold">Made for Nahom Tigistu</h1>
+              <p class="poppins-regular">Show all</p>
+            </div>
+
+            <!-- Suggested albums -->
+            <div class="suggested-musics-album-container">
+              <!-- Suggested album 1 -->
+              <div class="Sugg-alb">
+                <div class="alb-cover cover">
+                  <img src="img/Img33.jpeg" alt="" />
+                </div>
+                <div class="album-name name7">
+                  <p class="poppins-regular">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. !
+                  </p>
+                </div>
+              </div>
+
+              <!-- Suggested album 2 -->
+              <div class="Sugg-alb">
+                <div class="alb-cover cover">
+                  <img src="img/Img35.jpeg" alt="" />
+                </div>
+                <div class="album-name name7">
+                  <p class="poppins-regular">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. !
+                  </p>
+                </div>
+              </div>
+
+              <!-- Suggested album 3 -->
+              <div class="Sugg-alb">
+                <div class="alb-cover cover">
+                  <img src="img/Img39.jpeg" alt="" />
+                </div>
+                <div class="album-name name7">
+                  <p class="poppins-regular">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. !
+                  </p>
+                </div>
+              </div>
+
+              <!-- Suggested album 4 -->
+              <div class="Sugg-alb">
+                <div class="alb-cover cover">
+                  <img src="img/Img37.jpeg" alt="" />
+                </div>
+                <div class="album-name name7">
+                  <p class="poppins-regular">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. !
+                  </p>
+                </div>
+              </div>
+
+              <!-- Suggested album 5 -->
+              <div class="Sugg-alb">
+                <div class="alb-cover cover">
+                  <img src="img/Img38.jpeg" alt="" />
+                </div>
+                <div class="album-name name7">
+                  <p class="poppins-regular">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. !
+                  </p>
+                </div>
+              </div>
+
+              <!-- Suggested album 6 -->
+              <div class="Sugg-alb">
+                <div class="alb-cover cover">
+                  <img src="img/Img43.webp" alt="" />
+                </div>
+                <div class="album-name name7">
+                  <p class="poppins-regular">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. !
+                  </p>
+                </div>
+              </div>
+
+              <!-- Suggested album 7 -->
+              <div class="Sugg-alb">
+                <div class="alb-cover cover">
+                  <img src="img/Img42.webp" alt="" />
+                </div>
+                <div class="album-name name7">
+                  <p class="poppins-regular">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. !
+                  </p>
+                </div>
+              </div>
+
+              <!-- Suggested album 8 -->
+              <div class="Sugg-alb">
+                <div class="alb-cover cover">
+                  <img src="img/Img44.webp" alt="" />
+                </div>
+                <div class="album-name name7">
+                  <p class="poppins-regular">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. !
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ******* FOOTER ****** -->
+          <footer class="footer">
+            <div class="footer-container">
+              <!-- Company -->
+              <div class="company footer-text">
+                <h2 class="poppins-semibold">Company</h2>
+                <h3 class="poppins-regular">About</h3>
+                <h3 class="poppins-regular">Jobs</h3>
+                <h3 class="poppins-regular">For the Record</h3>
+              </div>
+              <!-- Communities -->
+              <div class="communities footer-text">
+                <h2 class="poppins-semibold">Communities</h2>
+                <h3 class="poppins-regular">For Artists</h3>
+                <h3 class="poppins-regular">Developers</h3>
+                <h3 class="poppins-regular">Investors</h3>
+                <h3 class="poppins-regular">Vendors</h3>
+              </div>
+              <!-- Useful links -->
+              <div class="useful-links footer-text">
+                <h2 class="poppins-semibold">Useful links</h2>
+                <h3 class="poppins-regular">Support</h3>
+                <h3 class="poppins-regular">Free Mobile App</h3>
+              </div>
+              <!-- Spotify Plans -->
+              <div class="plans footer-text">
+                <h2 class="poppins-semibold">Spotify Plans</h2>
+                <h3 class="poppins-regular">Premium Duo</h3>
+                <h3 class="poppins-regular">Spotify free</h3>
+              </div>
+
+              <!-- Social links -->
+              <div class="social-links">
+                <div class="insta icon">
+                  <img src="Icon/instagram-icon-white.svg" alt="" />
+                </div>
+                <div class="twitter icon">
+                  <img src="Icon/twitter-icon.svg" alt="" />
+                </div>
+                <div class="facebook icon">
+                  <img src="Icon/facebook-icon-white.svg" alt="" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Legal Terms -->
+            <div class="legal-terms">
+              <div class="privacy-policy">
+                <h3 class="poppins-regular">Legal</h3>
+                <h3 class="poppins-regular">Safety & Privacy Center</h3>
+                <h3 class="poppins-regular">Privacy Policy</h3>
+                <h3 class="poppins-regular">Cookies</h3>
+                <h3 class="poppins-regular">About Ads</h3>
+                <h3 class="poppins-regular">Accessibility</h3>
+              </div>
+              <h3 class="poppins-regular">&copy; 2025 Spotify AB</h3>
+            </div>
+          </footer>
         </section>
       </section>
     </main>
+
+    <!-- ######### PLAYER ########### -->
+
+    <script src="app.js"></script>
   </body>
 </html>

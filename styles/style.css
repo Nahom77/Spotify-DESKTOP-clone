@@ -9,7 +9,8 @@ html {
 }
 
 body {
-  background: #d3d3d3;
+  background: #000000;
+  color: white;
 }
 
 button {
@@ -20,10 +21,12 @@ button {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
+  cursor: pointer;
 }
 
 .icon {
   width: 3.5rem;
+  cursor: pointer;
   /* color: white; */
   /* padding: 0.5rem; */
   /* margin: 1rem; */
@@ -107,7 +110,7 @@ button {
 }
 
 .home-button {
-  background: rgba(0, 0, 0, 0.082);
+  background: rgba(58, 57, 57, 0.788);
   margin-right: 0.8rem;
   padding: 1rem;
   border-radius: 50%;
@@ -121,11 +124,13 @@ button {
   display: flex;
   align-items: center;
   margin: 0rem 0.2rem;
-  width: 48rem;
+  width: clamp(30rem, 30rem + 10vw, 48rem);
   position: relative;
 }
 
 .my-form input {
+  background-color: rgba(58, 57, 57, 0.788);
+  color: white;
   width: 100%;
   height: 100%;
   border: none;
@@ -165,6 +170,7 @@ button {
 }
 
 .install-app {
+  color: rgb(163, 159, 159);
   width: 8.7rem;
   margin: 0 1.6rem;
   padding: 0;
@@ -208,16 +214,18 @@ button {
   margin: auto;
   display: flex;
   min-height: 75vh;
+  gap: 0.7rem;
 }
 
 .left-side-library {
-  flex: 1 1 40rem;
-  background: #b1b0b0;
+  flex: 0 0 34rem;
+  background: rgba(37, 37, 37, 0.692);
   border-radius: 1rem;
   padding: 0.6rem 1.5rem;
   height: 75vh;
   display: flex;
   flex-direction: column;
+  transition: all 0.2s;
 }
 .left-side-library .your-library {
   display: flex;
@@ -242,12 +250,12 @@ button {
   align-items: center;
 }
 .left-side-library .your-library .your-library-icons .plus-button {
-  background: rgba(0, 0, 0, 0.082);
+  background-color: rgba(58, 57, 57, 0.788);
   padding: 0.6rem;
   border-radius: 50%;
   margin: 1rem;
 }
-.left-side-library .your-library .your-library-icons .right-arrow-icon {
+.left-side-library .your-library .your-library-icons .expand-icon {
   margin: 1rem;
 }
 .left-side-library .your-library .your-library-icons img {
@@ -258,26 +266,24 @@ button {
   margin-bottom: 0.7rem;
 }
 .selection-btns button {
+  color: white;
   margin-right: 0.4rem;
   padding: 0.5rem 1.2rem;
-  background: rgba(230, 229, 229, 0.952);
+  background: rgba(116, 114, 114, 0.212);
 }
 
-.lower-library {
-  overflow: scroll;
-}
 .lower-library .search-recent {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 0.5rem;
   margin-right: 0.5rem;
+  margin-top: 1.8rem;
 }
 .lower-library .search-recent .recents {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 1.8rem;
 }
 .lower-library .search-recent h4 {
   font-size: 1.4rem;
@@ -287,6 +293,8 @@ button {
   width: 1.8rem;
 }
 .lower-library .library-lists {
+  height: 50vh;
+  overflow: scroll;
   display: flex;
   flex-direction: column;
   margin-top: 0.6rem;
@@ -294,8 +302,9 @@ button {
 .lower-library .library-lists .mylist {
   display: flex;
   align-items: center;
-  height: 5rem;
-  margin: 0.8rem 0;
+  height: 6.5rem;
+  padding: 1rem;
+  border-radius: 1rem;
 }
 .lower-library .library-lists .mylist .album-name {
   display: flex;
@@ -311,7 +320,7 @@ button {
   width: 0.34rem;
   height: 0.34rem;
   border-radius: 50%;
-  background: black;
+  background: white;
   margin: 0 0.5rem;
 }
 .lower-library .library-lists .mylist .album-name h4 {
@@ -319,6 +328,10 @@ button {
 }
 .lower-library .library-lists .mylist .album-name p {
   font-size: 1.32rem;
+}
+
+.mylist:hover {
+  background: rgba(100, 99, 99, 0.233);
 }
 
 .library-lists img {
@@ -331,10 +344,172 @@ button {
      object-position: center;
 }
 
+.collapse {
+  flex: 0 0 7rem;
+  align-items: center;
+  padding: 2rem 0 0 0;
+}
+.collapse .upper-library h4,
+.collapse .expand-icon,
+.collapse .selection-btns {
+  display: none;
+}
+.collapse .your-library {
+  flex-direction: column;
+}
+.collapse .lower-library {
+  scrollbar-width: thin;
+}
+.collapse .lower-library .search-recent {
+  display: none;
+}
+.collapse .lower-library .mylist .album-name {
+  display: none;
+}
+
+.expanded {
+  flex: 1 1 100rem;
+  width: 100%;
+}
+.expanded .library-controllers {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.expanded .selection-btns button {
+  padding: 0.9rem 1.7rem;
+}
+.expanded .library-lists {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.expanded .library-lists .mylist {
+  flex-direction: column;
+  align-items: flex-start;
+  height: 24.5rem;
+}
+.expanded .library-lists img {
+  width: 17rem;
+  height: 17rem;
+}
+
 .right-side-library {
-  flex: 4 1 50rem;
-  min-height: 75vh;
-  background: lightblue;
+  flex: 4 1 100rem;
+  overflow: scroll;
+  max-height: 75vh;
+  background: rgba(37, 37, 37, 0.692);
+  border-radius: 1rem;
+  padding: 1.5rem 4rem;
+}
+.right-side-library .all-music-btns button {
+  padding: 0.7rem 1.4rem;
+  margin-right: 1rem;
+  background: rgba(116, 114, 114, 0.212);
+  color: white;
+  font-size: 1.4rem;
+}
+.right-side-library .all-music-btns button:nth-child(1) {
+  background: white;
+  color: black;
+}
+.right-side-library .recently-played-container {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1rem;
+}
+.right-side-library .recent-album {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 4.5rem;
+  border-radius: 1rem;
+  background: rgba(116, 114, 114, 0.212);
+  cursor: pointer;
+}
+.right-side-library .recent-album img {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 1rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.right-side-library .recent-album h4 {
+  font-size: 1.2rem;
+}
+.right-side-library .suggested-musics-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 5rem;
+}
+.right-side-library .suggested-musics-container .title1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.right-side-library .suggested-musics-container .suggested-musics-album-container {
+  display: flex;
+  gap: 1rem;
+  overflow-x: scroll;
+  scrollbar-width: thin;
+}
+.right-side-library .suggested-musics-container .suggested-musics-album-container .Sugg-alb img {
+  border-radius: 1rem;
+  width: 17rem;
+  height: 17rem;
+}
+.right-side-library .footer {
+  margin: 7rem 0;
+}
+.right-side-library .footer .footer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 6rem 0;
+  border-top: 1px solid rgba(97, 94, 94, 0.315);
+  border-bottom: 1px solid rgba(97, 94, 94, 0.315);
+}
+.right-side-library .footer .footer-container h2 {
+  font-size: 1.55rem;
+  margin-bottom: 1.2rem;
+}
+.right-side-library .footer .footer-container h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.right-side-library .footer .footer-container .social-links {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.right-side-library .footer .footer-container .social-links div {
+  background: rgba(116, 114, 114, 0.212);
+  border-radius: 50%;
+  width: 4.2rem;
+  height: 4.2rem;
+  padding: 1rem;
+}
+.right-side-library .footer .footer-container .social-links img {
+  width: 2.2rem;
+}
+.right-side-library .footer .legal-terms {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+.right-side-library .footer .legal-terms .privacy-policy {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.right-side-library .footer .legal-terms h3 {
+  font-size: 1.4rem;
 }
 
 @media (max-width: 1020px) {
