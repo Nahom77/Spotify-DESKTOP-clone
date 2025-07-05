@@ -9,6 +9,7 @@ html {
 }
 
 body {
+  width: 135rem;
   background: #000000;
   color: white;
 }
@@ -394,7 +395,8 @@ button {
 }
 
 .right-side-library {
-  flex: 4 1 100rem;
+  flex: 4 1 50rem;
+  width: 60rem;
   overflow: scroll;
   max-height: 75vh;
   background: rgba(37, 37, 37, 0.692);
@@ -576,11 +578,8 @@ button {
 }
 
 @media (max-width: 700px) {
-  .player {
-    width: 90%;
-  }
-  .player .music-player {
-    justify-self: start;
+  body {
+    width: 80rem;
   }
 }
 @media (max-width: 1020px) {
