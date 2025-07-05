@@ -20,7 +20,7 @@ This spotify cloning project consists the following features,
 ### Links
 
 - Solution URL: [Solution URL](https://github.com/Nahom77/Spotify-clone)
-- Live Site URL: [Live site URL](https://spotify-by-nahom.netlify.app/)
+- Live Site URL: [Live site URL](https://spotify-desktop-clone.vercel.app/)
 
 ## My process
 
