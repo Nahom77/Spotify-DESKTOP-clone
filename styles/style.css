@@ -512,6 +512,77 @@ button {
   font-size: 1.4rem;
 }
 
+.player {
+  overflow: hidden;
+  width: 98%;
+  margin: auto;
+  margin-top: 3rem;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 10rem;
+}
+.player .music-player {
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.player .music-player .controll-btns {
+  display: flex;
+  gap: 3rem;
+}
+.player .music-player .pause-icon {
+  width: 2.5rem;
+}
+.player .music-player img {
+  width: 1.6rem;
+  cursor: pointer;
+}
+.player .music-player .progress {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 130%;
+}
+.player .music-player .progress .progress-bar {
+  width: 100%;
+  height: 0.5rem;
+  border-radius: 1rem;
+  background: rgb(119, 118, 118);
+  cursor: pointer;
+}
+.player .other-controlls {
+  justify-self: end;
+  display: flex;
+  gap: 2rem;
+}
+.player .other-controlls img {
+  width: 1.6rem;
+}
+.player .other-controlls .progress {
+  width: 12rem;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+.player .other-controlls .progress .progress-bar {
+  width: 100%;
+  height: 0.4rem;
+  border-radius: 1rem;
+  background: rgb(240, 237, 237);
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .player {
+    width: 90%;
+  }
+  .player .music-player {
+    justify-self: start;
+  }
+}
 @media (max-width: 1020px) {
   .my-head .premium-btn {
     display: none;
