@@ -39,7 +39,7 @@ In developing this project i have exercised SASS, and gained experience to work 
 
 ### Continued development
 
-Backend development, user authentication, other rest features of spotidy will be continued in the feature.
+Backend development, user authentication, other rest features of spotify will be continued in the feature.
 
 ## Author
 
